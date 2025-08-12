@@ -1,4 +1,5 @@
 lib/constants.dart
+lib/firebase_options.dart
 
 
 # Miscellaneous
