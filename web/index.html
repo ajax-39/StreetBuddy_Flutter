@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+    <base href="$FLUTTER_BASE_HREF" />
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="street_buddy" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>street_buddy</title>
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <!-- Password Reset Handler -->
+    <script>
+      // Handle password reset redirects
+      window.addEventListener("load", function () {
+        console.log(
+          "Street Buddy app loaded, checking for reset password parameters..."
+        );
+
+        // Method 1: Check URL parameters directly
+        if (
+          window.location.search.includes("code=") ||
+          window.location.hash.includes("code=")
+        ) {
+          let code, type;
+
+          // Process URL search parameters
+          if (window.location.search.includes("code=")) {
+            const urlParams = new URLSearchParams(window.location.search);
+            code = urlParams.get("code");
+            type = urlParams.get("type");
+          }
+          // Process hash-based parameters
+          else if (window.location.hash.includes("code=")) {
+            const hashParams = new URLSearchParams(
+              window.location.hash.substring(
+                window.location.hash.indexOf("?") + 1
+              )
+            );
+            code = hashParams.get("code");
+            type = hashParams.get("type");
+          }
+
+          if (code && type === "recovery") {
+            console.log(
+              "Password reset code detected in URL parameters:",
+              code
+            );
+            // Store for Flutter to use
+            window.passwordResetCode = code;
+            window.passwordResetType = type;
+
+            // Redirect to Flutter route with hash routing if needed
+            if (!window.location.hash.includes("/reset-password")) {
+              console.log("Redirecting to Flutter reset password route");
+              window.location.replace(
+                `${window.location.origin}/#/reset-password?code=${code}&type=${type}`
+              );
+            }
+          }
+        }
+
+        // Method 2: Check for stored parameters (from reset-password.html)
+        if (sessionStorage.getItem("resetPasswordCode")) {
+          const code = sessionStorage.getItem("resetPasswordCode");
+          const type = sessionStorage.getItem("resetPasswordType");
+
+          console.log("Password reset code found in session storage:", code);
+
+          // Store for Flutter to use
+          window.passwordResetCode = code;
+          window.passwordResetType = type;
+
+          // Redirect to Flutter route with hash routing if needed
+          if (!window.location.hash.includes("/reset-password")) {
+            console.log(
+              "Redirecting to Flutter reset password route from session storage"
+            );
+            window.location.replace(
+              `${window.location.origin}/#/reset-password?code=${code}&type=${type}`
+            );
+          }
+
+          // Clear session storage to prevent redirect loops
+          sessionStorage.removeItem("resetPasswordCode");
+          sessionStorage.removeItem("resetPasswordType");
+        }
+
+        // Method 3: Handle specific reset-password path
+        if (window.location.pathname === "/reset-password") {
+          const urlParams = new URLSearchParams(window.location.search);
+          const code = urlParams.get("code");
+          const type = urlParams.get("type");
+
+          if (code && type === "recovery") {
+            console.log(
+              "Password reset path detected, redirecting to Flutter route"
+            );
+            // Store for Flutter to use
+            window.passwordResetCode = code;
+            window.passwordResetType = type;
+
+            // Redirect to Flutter route with hash routing
+            window.location.replace(
+              `${window.location.origin}/#/reset-password?code=${code}&type=${type}`
+            );
+          }
+        }
+      });
+    </script>
+    <script src="flutter_bootstrap.js" async></script>
+  </body>
+</html>

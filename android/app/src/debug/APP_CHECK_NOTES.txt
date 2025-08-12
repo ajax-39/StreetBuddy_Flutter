@@ -1,0 +1,14 @@
+// Placing this file under android/app/src/debug to indicate it should only be used in debug builds
+
+// Instructions for setting up Firebase App Check Debug Token:
+//
+// 1. Get the debug token by running the app in debug mode
+// 2. The token will be printed in the console with 🔑🔑🔑 markers
+// 3. Go to Firebase Console -> Your Project -> Settings -> App Check
+// 4. In "Apps using App Check" section, add the debug token for your app
+// 5. Select "Debug token" as the provider and paste your token
+// 6. Save the changes
+//
+// IMPORTANT: Never use debug tokens in production builds!
+// The debug provider is only for local development testing.
+// For production, use Play Integrity provider instead.

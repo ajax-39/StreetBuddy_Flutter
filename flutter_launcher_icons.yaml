@@ -1,0 +1,8 @@
+# flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: true  # Enable iOS icons as well
+  image_path: "assets/icon/logo.png"
+  adaptive_icon_foreground: "assets/icon/logo.png"
+  adaptive_icon_background: "#FFFFFF"  # Use a solid color background for better adaptive icon appearance
+  min_sdk_android: 21

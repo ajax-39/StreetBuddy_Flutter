@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "947773209201",
+    "project_id": "streetbuddy-bd84d",
+    "storage_bucket": "streetbuddy-bd84d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947773209201:android:5ac4d381a5fb3a5920f9d0",
+        "android_client_info": {
+          "package_name": "com.example.street_buddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947773209201-7s214m1eqfabhl060gaasmp5smkmq5mc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.street_buddy",
+            "certificate_hash": "781f9848583b5a626ebee1c252b2a81f2681a8a8"
+          }
+        },
+        {
+          "client_id": "947773209201-mcv5vd55oo1mjet1jh59iqhmlpklnqi6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.street_buddy",
+            "certificate_hash": "a0c1cb898f08bce1f2bb30fd68c1cf44e8ed493f"
+          }
+        },
+        {
+          "client_id": "947773209201-r8tk38onm729kd7lscf7sf983c6uof1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBefiQozi26-wb8Odv6GXHevqF0cbG3pQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947773209201-r8tk38onm729kd7lscf7sf983c6uof1q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "947773209201-r5rcn27mjomhueg1990p4p7cg0ppsont.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.streetBuddy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947773209201:android:9285b6a16a25254820f9d0",
+        "android_client_info": {
+          "package_name": "com.streetbuddy.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947773209201-e0ogv4ndjbodicq3anmkrv7oagj54o4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.streetbuddy.app",
+            "certificate_hash": "781f9848583b5a626ebee1c252b2a81f2681a8a8"
+          }
+        },
+        {
+          "client_id": "947773209201-r8tk38onm729kd7lscf7sf983c6uof1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBefiQozi26-wb8Odv6GXHevqF0cbG3pQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947773209201-r8tk38onm729kd7lscf7sf983c6uof1q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "947773209201-r5rcn27mjomhueg1990p4p7cg0ppsont.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.streetBuddy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

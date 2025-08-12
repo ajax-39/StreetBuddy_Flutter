@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Street Buddy</string>
+    <string name="facebook_app_id">799419672309930</string>
+    <string name="fb_login_protocol_scheme">fb799419672309930</string>
+    <string name="facebook_client_token">f41366a92aee01736aa3457693a98c05</string>
+</resources>

@@ -1,0 +1,10 @@
+
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.street_buddy",
+      "sha256_cert_fingerprints":
+      ["2C:B5:BD:5B:8E:D4:22:C5:9F:3E:36:E5:9C:2E:E8:B9:07:9E:28:B2:93:9A:34:21:72:36:E7:0B:E7:82:6B:BD"]
+    }
+  }]

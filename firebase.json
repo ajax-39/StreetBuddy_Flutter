@@ -1,0 +1,47 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "streetbuddy-bd84d",
+          "appId": "1:947773209201:android:5ac4d381a5fb3a5920f9d0",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "streetbuddy-bd84d",
+          "configurations": {
+            "android": "1:947773209201:android:5ac4d381a5fb3a5920f9d0",
+            "ios": "1:947773209201:ios:e365476cc2179ea120f9d0"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/reset-password**",
+        "destination": "/reset-password.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(html|js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0, no-cache"
+          }
+        ]
+      }
+    ]
+  }
+}
